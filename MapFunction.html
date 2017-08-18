@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Map Function</title>
+    <script type="text/javascript">
+
+          //Reference https://www.discovermeteor.com/blog/understanding-javascript-map/
+
+         // **** Understanding JavaScript's map()
+        //The map() method creates a new array with the results of calling a provided function on every element in this array.
+       //map takes two arguments, an array and a function. Usually, this is how you would call a function with two arguments:
+      //map(myArray, myFunction);
+     //But map is defined as an array method, meaning it’s an action that any JavaScript array can perform on itself. So instead, we call it like this:
+    //myArray.map(myFunction);
+
+       
+               
+        numberArray = [1, 2, 3, 4];
+        //**************** program-1 *********************
+
+       //The function taken as argument by map is known as the callback, because it’s called on every element in the original array.
+        var incrementByOne = function (num) {
+            return num + 1;
+        }
+        var newArray = numberArray.map(incrementByOne);
+
+        //*************** program-2 *************************
+
+        //So far we’ve had to separately define our callback function for every map. But JavaScript provides a handy shorthand in the form of anonymous functions.
+        //Instead of defining the callback by itself, we define it inside the map:
+
+        var newArray2 = numberArray.map(function (num) {
+            return Math.pow(num, 2);
+        });
+
+        //**************** program-3 *************************
+        var newArray3 = numberArray.map(function (num) {
+            return num + 1;
+        });
+
+        //***************  program-4 **************************
+        //by Fat Arrow Function
+
+        //Recently, JavaScript introduced a new, shorter syntax to define anonymous functions, known as the “fat arrow” ES2015 (or ES6) syntax.
+        //It lets you replace the traditional function (argument) {...} syntax with the much shorter:(argument) => {...}
+        //And if you’re only taking in a single argument, you can even get rid of the () altogether: argument => {...}
+        //This lets us rewrite our previous snippet as:
+
+        myArray = [1,2,3,4];
+
+        var newArray4 = myArray.map(num => {
+            return num + 1;
+        });
+
+       //What’s more, if all you’re doing is returning a value you can shorten your code even further:
+
+       var newArray5 = myArray.map(num => num + 1);
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
