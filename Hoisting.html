@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hoisting</title>
+</head>
+<body>
+    <h1>Hoisting</h1>
+    <h3><u>1-Variable Hoisting</u></h3>
+    <p>Hoisting is a JavaScript mechanism where variables and function <b>declarations</b> are moved to the top of their scope before code execution. </p>
+    
+    <h4>Example-1</h4>
+    <p id='p2'>x2 = 44;<br>
+            document.getElementById("p2").innerText = x2;<br>
+            var x2;
+            </p>
+    <p id='p3'></p>
+
+    <h3><u>2-Function Hoisting</u></h3>
+    <h4>Example-2</h4>
+    <p>
+            sum();<br>
+            function sum()
+            {
+             document.getElementById("fn").innerText="Hello function!";    
+            }
+            <br>
+            output:
+    </p>
+    <p id="fn"></p>
+    
+    <h3><u>3-Function expressions</u></h3>
+    <p>Function expressions, however are not <i><b>hoisted.</b></i></p>    
+    <h4>Example-3</h4>
+    <p>
+    expression();<br>
+    var expression= function(){
+        console.log("Will this work?")
+    }<br>
+    output:<p id="sp1">see in the console: TypeError: expression is not a function expression is not a function</p>
+   </p>
+
+
+
+</body>
+</html>
+
+<script>
+//example-1
+x2 = 44;
+document.getElementById("p3").innerText = "output = "+  x2;
+var x2;
+
+//example-2
+sum();
+function sum()
+{
+ document.getElementById("fn").innerText="Hello function!";    
+}
+
+//example-3
+expression();
+var expression= function(){
+  document.getElementById("sp1").innerText = "Will this work?";
+}
+
+
+
+</script>
