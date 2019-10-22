@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UseStrict</title>
+</head>
+<body>
+    <h1>UseStrict mode javascript</h1>
+    <p>
+        With strict mode, you can not use undeclared variables.
+    </p>
+    <h3>Example-1</h3>    
+    <p>
+            "use strict";<br>            
+             x = 3.14;       // This will cause an error because x is not declared
+    </p>
+    
+    <h3>Example-2</h3>
+    <p>
+            x = 3.14;       // This will not cause an error.<br>
+            myFunction();<br>            
+            function myFunction() { <br>
+              "use strict";
+              y = 3.14;   // This will cause an error
+            }
+    </p>
+
+
+</body>
+</html>
+<script>
+
+"use strict";
+ x = 3; //this will cause an error
+
+</script>
+
+<script>
+
+x=3.14;
+myFunction();
+function myFunction()
+{
+    "use strict";
+     y = 3.14;
+}
+
+</script>
